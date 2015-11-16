@@ -36,6 +36,8 @@ pub struct HTMLImageElement {
     htmlelement: HTMLElement,
     url: DOMRefCell<Option<Url>>,
     image: DOMRefCell<Option<Arc<Image>>>,
+    currentRequest: ImageRequest,
+    pendingRequest: ImageRequest,
 }
 
 impl HTMLImageElement {
