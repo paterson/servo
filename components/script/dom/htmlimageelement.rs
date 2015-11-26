@@ -30,6 +30,7 @@ use std::sync::Arc;
 use string_cache::Atom;
 use url::{Url, UrlParser};
 use util::str::DOMString;
+use dom::imagerequest::ImageRequest;
 
 #[dom_struct]
 pub struct HTMLImageElement {
