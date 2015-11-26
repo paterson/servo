@@ -13,6 +13,6 @@
 //[Constructor(ImageData imageData, URL currentUrl)]
 interface ImageRequest {
   readonly attribute ImageState state;
-  readonly attribute DOMString currentUrl;
+  readonly attribute URL currentUrl;
   readonly attribute ImageData imageData;
 };
