@@ -30,12 +30,15 @@ use std::sync::Arc;
 use string_cache::Atom;
 use url::{Url, UrlParser};
 use util::str::DOMString;
+use dom::imagerequest::ImageRequest;
 
 #[dom_struct]
 pub struct HTMLImageElement {
     htmlelement: HTMLElement,
     url: DOMRefCell<Option<Url>>,
     image: DOMRefCell<Option<Arc<Image>>>,
+    currentRequest: ImageRequest,
+    pendingRequest: ImageRequest,
 }
 
 impl HTMLImageElement {
